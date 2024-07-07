@@ -36,8 +36,8 @@ We provide both python file and jupyter notebook file for testing. When running 
 
 ## Pretrained Models
 
-| dataset | dataset sampling rate(%) | accuracy(%) | link       |
-| :-----: | :----------------------: | :---------: | ---------- |
+| dataset | dataset sampling rate(%) | accuracy(%) |    link    |
+| :-----: | :----------------------: | :---------: | :--------: |
 |   soc   |            10            |      -      | In process |
 |   soc   |            20            |      -      | In process |
 |   soc   |            30            |      -      | In process |
