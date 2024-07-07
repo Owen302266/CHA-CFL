@@ -138,6 +138,8 @@ def run(
 
 if __name__ == '__main__':
     # parameters config
+    
+    # for testing , it's only needed to change the sampling rate 
     sampling_rate = 10  # 10% - 50%
     dataset = 'soc'
     classes = 10

@@ -1,5 +1,3 @@
-dataset/
-experiments/
+dataset
 src/*/__pycache__/
 .vscode/
-visualization/
