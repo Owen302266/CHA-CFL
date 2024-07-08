@@ -19,7 +19,23 @@ The code is conducted under official PyTorch library, and pre-trained models are
 
 ![alt text](figures/framework.png)
 
+
+
 To fully explore the label distribution of images, we use CHA-CFL to find the hierarchical similarity in categories. The source code of Multi-view Feature Extractor is included in this repository.
+
+## Result
+
+The experiments are carried under MSTAR dataset and shows inspiring results. The result under SOC is shown below. 
+
+|    Method    |    10%     |    20%     |    30%     |    40%     |    50%     |
+| :----------: | :--------: | :--------: | :--------: | :--------: | :--------: |
+|  A-ConvNet   |   76.89%   |   88.31%   |   94.00%   |   95.82%   |   95.85%   |
+| RotANet-m2R1 |   83.94%   | **93.05%** |   96.04%   |   97.09%   |   97.95%   |
+|  ConFeDent   |   81.36%   |   90.68%   |   94.23%   |   96.95%   |   97.16%   |
+|   CHA-CFL    | **84.21%** |   92.66%   | **97.73%** | **98.40%** | **98.85%** |
+
+Notice that the accuracy in the paper is the average accuracy of three random conducted experiments. The provided model test results may slightly deviate from the accuracy results reported in the paper.
+
 
 ## Get Started
 
@@ -29,9 +45,49 @@ The key environment we use are as below:
 - CUDA: 12.1
 - PyTorch: 1.13.0
 - Numpy: 1.26.3
-  
 
-We provide both python file and jupyter notebook file for testing. When running the code, only sampling_rate variable is needed to change within[10, 20, 30, 40, 50]. 
+First download the MSTAR dataset from this link, unzip the package and put the soc folder under dataset folder as follows.It's also need to put pretrained models under the pretrained_models folder.
+
+```
+    CHA-CFL
+    |   .gitignore
+    |   LICENSE
+    |   README.md
+    |   
+    +---dataset
+    |   |   
+    |   \---soc
+    |       +---test
+    |       \---raw
+    |
+    +---figures
+    |       framework.png
+    |
+    +---pretrained_models
+    |       SamplingRate_50_dataset_soc_view_3.pth
+    |
+    \---src
+        |   test.py
+        |   validation.ipynb
+        |
+        +---data
+        |   |   loader.py
+        |   |   preprocess.py
+        |   \---__init__.py  
+        |
+        +---models
+        |   |   network.py
+        |   |   _base.py
+        |   |   _blocks.py
+        |   \---__init__.py
+        |
+        \---utils
+            |   common.py
+            \---__init__.py
+
+```
+
+We provide both python file and jupyter notebook file for testing. When running the code, only sampling_rate variable is needed to change within[10, 20, 30, 40, 50].
 
 
 ## Pretrained Models
