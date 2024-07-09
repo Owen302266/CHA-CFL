@@ -1,3 +1,4 @@
 dataset
 src/*/__pycache__/
 .vscode/
+pretrained_models/
